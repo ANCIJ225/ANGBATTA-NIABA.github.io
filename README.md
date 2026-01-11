@@ -1,33 +1,33 @@
-# Gestion Notes
+# Gestionnaire Académique Angbatta
 
-A Java application for managing academic notes, bulletins, and class passages.
+Une application Java pour gérer les notes académiques, bulletins et passages de classe.
 
-## Prerequisites
+## Prérequis
 
 - Java 11+
 - Maven 3.6+
 
-## Build
+## Compilation
 
 ```bash
 mvn compile
 ```
 
-## Run
+## Lancement
 
 ```bash
 mvn exec:java
 ```
 
-Or use VS Code task "run"
+Ou utilisez la tâche VS Code "run"
 
-## Features
+## Fonctionnalités
 
-- Manage student notes (grades)
-- Generate bulletins (report cards)
-- Handle class passages (promotions)
+- Gérer les notes des étudiants
+- Générer les bulletins
+- Gérer les passages de classe
 
-## Project Structure
+## Structure du projet
 
-- `src/main/java/com/angbatta/` - Main source code
-- `pom.xml` - Maven configuration
+- `src/main/java/com/angbatta/` - Code source principal
+- `pom.xml` - Configuration Maven
