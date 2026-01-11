@@ -1,71 +1,14 @@
 package com.angbatta;
 
-import java.util.*;
-import java.io.*;
-import java.io.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class App {
-    private static List<Student> students = new ArrayList<>();
-    private static List<Course> courses = new ArrayList<>();
-    private static List<Grade> grades = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
-        loadData();
-        // Add some sample data if empty
-        if (courses.isEmpty()) {
-            courses.add(new Course("MATH", "Mathématiques"));
-            courses.add(new Course("FR", "Français"));
-        }
-        if (students.isEmpty()) {
-            students.add(new Student("1", "Alice", 10, "Classe 1"));
-            students.add(new Student("2", "Bob", 11, "Classe 1"));
-        }
-
-        while (true) {
-            System.out.println("\n=== Gestionnaire Académique ===");
-            System.out.println("1. Ajouter Étudiant");
-            System.out.println("2. Ajouter Cours");
-            System.out.println("3. Ajouter Note");
-            System.out.println("4. Générer Bulletin");
-            System.out.println("5. Promouvoir Étudiants");
-            System.out.println("6. Lister Étudiants");
-            System.out.println("7. Lister Cours");
-            System.out.println("8. Lister Notes d'un Étudiant");
-            System.out.println("9. Statistiques");
-            System.out.println("10. Modifier Étudiant");
-            System.out.println("11. Supprimer Étudiant");
-            System.out.println("12. Modifier Cours");
-            System.out.println("13. Supprimer Cours");
-            System.out.println("14. Modifier Note");
-            System.out.println("15. Supprimer Note");
-            System.out.println("16. Sauvegarder Données");
-            System.out.println("17. Quitter");
-            System.out.print("Choisissez une option: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
-            switch (choice) {
-                case 1: addStudent(); break;
-                case 2: addCourse(); break;
-                case 3: addGrade(); break;
-                case 4: generateBulletin(); break;
-                case 5: promoteStudents(); break;
-                case 6: listStudents(); break;
-                case 7: listCourses(); break;
-                case 8: listStudentGrades(); break;
-                case 9: showStatistics(); break;
-                case 10: editStudent(); break;
-                case 11: deleteStudent(); break;
-                case 12: editCourse(); break;
-                case 13: deleteCourse(); break;
-                case 14: editGrade(); break;
-                case 15: deleteGrade(); break;
-                case 16: saveData(); break;
-                case 17: saveData(); return;
-                default: System.out.println("Choix invalide");
-            }
-        }
+        SpringApplication.run(App.class, args);
     }
+}
 
     private static void addStudent() {
         System.out.print("ID: ");
