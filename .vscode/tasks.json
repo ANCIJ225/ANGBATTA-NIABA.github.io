@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "run",
+			"type": "shell",
+			"command": "mvn",
+			"args": [
+				"exec:java"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
